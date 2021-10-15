@@ -1,3 +1,1 @@
- # Git and Github course
-
- Crash course for Git
+ # Course JS from EASY_CODE
