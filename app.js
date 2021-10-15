@@ -505,7 +505,7 @@ if (Array.isArray(value)) {
 //     name: 'Ruslan'
 // };
 
-//if (user.name) 
+//if (user.name)
 //if (user.hasOwnProperty('name')) проверяет есть ли тако ключ, но не проверяет значение
 // {
 //     console.log(user.name)
@@ -535,17 +535,16 @@ if (Array.isArray(value)) {
 //     console.log('age from 16 to 65')
 // };
 
-
 // let serverNickname = 'Denis';
 // let nickname = serverNickname || 'default nickname';
-// console.log(nickname); 
+// console.log(nickname);
 
-//value = 1 && 0 && 3; 
-// false, null 
+//value = 1 && 0 && 3;
+// false, null
 // если все значения true - вернёт последнее
 //console.log(value);
 
-// productPrice = 10; 
+// productPrice = 10;
 // if (productPrice >=5 && productPrice <=20 ){
 //     console.log('I got this');
 // } else {
@@ -705,6 +704,73 @@ const productPrice = parseFloat(product.price);
         console.log('Товаров не найдено');
     };
     
-    */
 
- 
+
+// тернарные операторы
+// выражение ? если да : если нет;
+// выражение ? если да : выражение ? если да : если нет;
+let a = 1;
+let b = 0;
+
+// if (a > 0) {
+//   b = a;
+// } else {
+//   b += 1;
+// }
+
+// a > 0 ? b = a : b += 1;
+let c = a > 0 ? (b = a) : (b += 1);
+
+console.log(`b: ${b}, c: ${c}`);
+
+// для переопределения b  лучше использовать такую запись
+
+b = a > 0 ? a : b + 1;
+console.log(`b: ${b}`) 
+
+b = a > 0 ? 2 : a < 0 ? 3 : 0; 
+console.log(`b: ${b}`) 
+
+
+let color = "green";
+
+switch (color) {
+  case "yellow":
+    console.log("color is yellow");
+    break;
+  case "orange":
+    console.log("color is orange");
+    break;
+  case "red":
+    console.log("color is red");
+    break;
+  default:
+    console.log("default colour");
+}
+
+*/
+let a = "block";
+
+switch (a) {
+  case "block":
+    console.log("block");
+    break;
+  case "none":
+    console.log("none");
+    break;
+  case "inline":
+    console.log("inline");
+    break;
+  default:
+    console.log("other");
+}
+
+let b = "hidden";
+
+b = b === "hidden" ? "visible" : "hidden";
+console.log(b);
+
+let c = 1;
+
+c = c === 0 ? (c = 1) : c < 0 ? "less then zero" : (c *= 10);
+console.log(c);
