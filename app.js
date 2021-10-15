@@ -189,7 +189,6 @@ console.log(str);
 let value3 = Math.round(Math.PI * 100) / 100;
 console.log(value3);
 
-*/
 
 const firstName = 'Denis';
 const lastName = 'Shvydkiy';
@@ -250,6 +249,462 @@ console.log(value);
 value = str.substr(6,7);
 console.log(value);
 
-// заменет значения
+// заменяет значения
 value = str.replace('Denis', 'Ruslan')
 console.log(value);
+
+
+
+const firstName = 'Denis';
+const lastName = 'Shvydkiy';
+const age = 30;
+
+let str;
+
+str = 'Hello my name is' + ' ' + firstName + ' ' + lastName;
+
+str = '<ul>' +
+        '<li>First name: ' + firstName + '</li>' + 
+        '<li>Last name: ' + lastName + '</li>' +
+        '<li>Age: ' + age + '</li>'+
+       '</ul>' ;
+
+//console.log(str);
+
+//es6
+ str = `
+ <ul>
+    <li>First Name: ${firstName}</li>
+    <li>Last Name: ${lastName}</li>
+    <li>Age: ${age}</li>
+    <li>Math.random: ${Math.random()}</li>
+    <li>5 + 5 = ${ 5 + 5 }</li>
+ </ul>
+ 
+ `;
+document.body.innerHTML =  str;
+
+
+
+let string = 'some test string'
+
+//1
+first = string.slice(0,1);
+last = string.slice(length-1);
+
+console.log(first, last);
+
+//2
+firstU = first.toUpperCase(); 
+lastU = last.toUpperCase();
+console.log(firstU,lastU);
+
+//3
+position = string.includes('string');
+console.log('position', position);
+
+//3 teatcher
+const wordPos = string.indexOf('string');
+console.log('wordPos =', wordPos);
+
+//4
+positionSpace = string.indexOf(' ', 6);  
+console.log(positionSpace);
+
+//4
+positionSpace2 = string.lastIndexOf(' ');  
+console.log(positionSpace2);
+
+//4 - teatcher
+const firstSpace = string.indexOf(' ');
+const secondSpace = string.indexOf(' ', firstSpace + 1);
+console.log(secondSpace);
+
+//5
+value = string.substr(5,4);
+console.log(value);
+
+//6
+value2 = string.slice(5,10);
+console.log(value2);
+
+//7
+newStr= string.slice(0,-6);
+console.log(newStr);
+
+//8 - преобразование чисел в строки
+
+a = 20;
+b = 16;
+a1 = String(20)
+b1 = String(16)
+concat = a+"" + b+"";
+concat2 = `${a}` + `${b}`
+concat3 = String(a) + String(b);
+console.log(concat, concat2, concat3, a1+b1);
+
+//a = num.toString()
+//b = num.toString()
+
+
+
+const user = {
+  firstName: "Ruslan",
+  age: 30,
+  isAdmin: true,
+  email: "123@gmail.com",
+  "user-address": {
+    city: "Kyiv",
+    street: "Gagarina",
+  },
+  skills: ["html", "css", "js"],
+};
+
+let value;
+let prop = "skills";
+
+value = user.firstName;
+value2 = user["isAdmin"];
+value3 = user["user-address"];
+value4 = user["user-address"].city;
+value5 = user[prop][0];
+
+//изменение свойства обьекта - перезапить обьекта
+user.firstName = "Anna";
+value = user.firstName;
+
+user.info = "Anna not Ruslan";
+valueInfo = user.info;
+
+user["user-address"].city = "kharkiv";
+user["user-address"].domNumber = 35;
+
+console.log(user);
+console.log(value, value2, value3, value4, value5);
+console.log(valueInfo);
+
+
+const phone =  {
+    product: 'iphone',
+}
+
+phone.price = 1000;
+phone.currency = 'dollar';
+
+phone.details = {};
+phone["details"].model = '';
+phone["details"].color = '';
+
+// или всё в одной строчке
+phone.details2 = {model:"XR", color: "Red"};
+
+console.log(phone);
+
+
+
+//>, <, =>, <=, ==, ===, !=, !==
+let value;
+
+value = 1 == 2;
+value0 = 1 == "1";
+value01 = 1 === "1";
+value1 = 1 == true;
+value2 = 1 === true;
+
+value3 = "a" > "A";
+value4 = "a".charCodeAt();
+
+console.log(value, value0, value01, value1, value2, value3, value4);
+
+
+
+val = ''; // NaN , 0 , false, '', undefined, null
+
+if (условие) {
+    //action if true
+} else {
+    // false action
+} 
+
+if (val !== 10) {
+    console.log('val = 10;')
+} else {
+    console.log("else");
+} 
+
+
+if (val) {
+    console.log('some action')
+} else {
+    console.log('else');
+} 
+
+
+
+//  || 
+// && 
+// ! - логическое нет, возвращает противоположное значение текущему в булевом представлении
+
+value = null;
+
+if (value === null) {
+  console.log(value, !value);
+}
+
+if (!value)
+{console.log('Если нет value  выполняем какое-то действие');
+}
+
+
+
+value = [];
+
+// if (value.length) {
+//   console.log(value);
+// } else {
+//     console.log('array is empty');
+// };
+
+// value.length == 0 еквивалентное значение
+
+if (Array.isArray(value)) {
+  console.log(value);
+} else {
+    console.log('array is empty');
+};
+
+*/
+
+// value = null;
+
+//console.log(!value); вернуть противоположное значение value в булевом типе или выполнить действие если value не имеет значения
+
+// if (!value) {
+//     console.log(value);
+// }
+
+// value = [1];
+
+// if (value.length) {
+//     console.log(value);
+// } else {
+//     console.log('array is empty')
+// }
+
+//length == 0 - false
+
+// value = null;
+
+// if (Array.isArray(value)) {
+//     console.log(value);
+// } else {
+//     console.log('array is empty')
+// }
+
+// let user = {
+//     name: 'Ruslan'
+// };
+
+//if (user.name) 
+//if (user.hasOwnProperty('name')) проверяет есть ли тако ключ, но не проверяет значение
+// {
+//     console.log(user.name)
+// } else {
+//     console.log('else')
+// }
+
+//  || - оператор "или"  если какой-либо из аргументов true, он вернёт true, в противоположной ситуации возвращается false.
+
+//  && - оператор "и" возвращает true, если оба аргумента истинны, а иначе – false:
+
+/* 
+Почему при написании проверки 3>2>1 результат выдаёт false? при этом если написать 1<2<3, то получаю true
+Действительно, операторы > и < выполняются слева-направо и после того, как первое сравнение вернет TRUE, а справа окажется 1, выполнится неявное приведение TRUE к числовому типу Number (TRUE => 1) , в результате сравнение вернет FALSE.
+В случае же 1<2<3 вернется TRUE, т.к. 1<3 
+*/
+
+// value = 1 || 0;
+// console.log(value);
+
+// let age = 16;
+
+// if (age < 16 || age > 65) {
+//     console.log('Some actions')
+// }
+// else {
+//     console.log('age from 16 to 65')
+// };
+
+
+// let serverNickname = 'Denis';
+// let nickname = serverNickname || 'default nickname';
+// console.log(nickname); 
+
+//value = 1 && 0 && 3; 
+// false, null 
+// если все значения true - вернёт последнее
+//console.log(value);
+
+// productPrice = 10; 
+// if (productPrice >=5 && productPrice <=20 ){
+//     console.log('I got this');
+// } else {
+//     console.log('not');
+// }
+
+// value = 10;
+
+// if (value < 10) {
+//     console.log('value < 10', value);
+// } else if (value >= 10) {
+//     console.log('value >=10', value);
+// } else {
+//     console.log('else');
+// }
+
+/*
+1. Чему равно а, почему?
+
+let a = 0 || 'string';    // 'string' возвращает первое попавшееся true
+let a = 1 && 'string';    // 'string' возвращает первый попавшийся false или последнее true
+let a = null || 25;       // 25 возвращает первое попавшееся true
+let a = null && 25;      // null возвращает первый попавшийся false
+let a = null || 0 || 35; // 35 возвращает первое попавшееся true
+let a = null && 0 && 35; // null  возвращает первый попавшийся false
+
+
+2.
+
+12 + 14 + '12' //2612
+
+let a1  = 3 + 2 - '1' // 4 При любых математических операциях со строкой кроме сложения строка преобразуется к числу поэтому пры вычитании строки "1" она преобразовалась в число 1
+'3' + 2 - 1 // 31  Cначала произошла конкатенация и получилась строка "32" и при вычитании получили числo
+true + 2 // 3
++'10' + 1 // 11  унарный плюс превращает строку в число и происходит сложение чисел
+undefined + 2 // NaN при любый математических операциях с undefined кроме сложения со строкой, результат будет NaN
+null + 5 // 5  null преобразуется к нулю
+true + undefined // NaN
+
+
+3. Создать произвольную переменную, присвоеть ей значение и написать условие, если переменная равна “hidden”, присвоить ей значение “visible”, иначе - “hidden”.
+
+let a = 'hidden';
+
+if (a === 'hidden') {
+    console.log('visible');
+}else { console.log('hidden');
+};
+
+3. пример преподователя
+
+// Всегда делайте строгое сравнение.
+if (a === 'hidden') {
+  a = 'visible';
+} else {
+  a = 'hidden';
+}
+
+4. Создать переменную и присвойте ей число.
+Используя if, записать условие:
+- если переменная равна нулю, присвоить ей 1;
+- если меньше нуля - строку “less then zero”;
+- если больше нуля - используя оператор “присвоение”, переменную умножить на 10 (использовать краткую запись).
+
+let b = -1;
+if (b === 0){
+    console.log(b=1);
+} else if (b < 0) { 
+    console.log(b = 'less then zero');
+}   
+else if ( b > 0) {
+        console.log(b = b *10 );
+};
+
+4. пример преподователя
+   let c = 2;
+
+if (c === 0) {
+  c = 1;
+} else if (c < 0) {
+  c = 'less then zero';
+} else {
+  // используйте короткую запись при арифметических операциях такого рода. 
+  c *= 10;
+} 
+console.log(c);
+
+5. Дан объект let car = { name: 'Lexus', age: 10, create: 2008, needRepair: false }.
+Написать условие если возраст машины больше 5 лет то нужно вывести в консоль сообщение 'Need Repair' и свойство needRepair в объекте car изменить на true; иначе изменить на false.
+
+
+ let car = {
+     name: 'Lexus',
+     age: 6,
+     create: 2008,
+     needRepair: false,
+ };
+
+ if (car.age > 5){ 
+     car.needRepair = true, console.log('Need Repair');
+ } else {
+     car.needRepair = false, console.log('Dont Need Repair')};
+ 
+ console.log(car);
+
+ 6. Дан объект let item = { name: 'Intel core i7', price: '100$', discount: '15%' }.
+
+Написать условие если у item есть поле discount и там есть значение которое не NaN а также есть поле price значение которого также не NaN то в объекте item создать поле priceWithDiscount и записать туда цену с учетом скидки и вывести ее в консоль, обратите внимание что поля discount и price это строки и вам из них нужно получить числа чтобы выполнить расчет. иначе если поля discount нет то вывести просто поле price в консоль.
+
+// мы выносим цену и скидку в отдельные переменные что бы несколько раз не вызывать parseFloat
+
+ let item = { 
+     name: 'Intel core i7',
+     price: '100$',
+     discount: '15%' };
+
+const price = parseFloat(item.price);
+const discount = parseFloat(item.discount);
+
+// проверяем что цена и скинда не являются NaN так как это важно при расчетах
+// if (parseInt(item.discount) - преобразование обьекта в число
+// пример преподователя
+
+if (!isNaN(price) && !isNaN(discount)) {
+  const priceWithDiscount = price - (price * (discount / 100));
+  console.log(priceWithDiscount)
+} else {
+  console.log(price);
+}
+
+
+if (item.discount !== NaN && item.price !== NaN) {
+    Number(item.priceWithDiscount = item.price * item.discount),
+    console.log(item.priceWithDiscount);
+} else if (item.discount == NaN){
+    console.log(item.price);
+};
+
+console.log(item);
+
+7. Написать условие если цена товара больше или равна минимальной цене и меньше или равна максимальной цене то вывести в консоль название этого товара, иначе вывести в консоль что товаров не найдено.
+
+
+let product = {
+    name: 'Яблоко',
+    price: '10$',
+    };
+    
+const productPrice = parseFloat(product.price);
+
+    let min = 10; // минимальная цена
+    let max = 20; // максимальная цена
+
+    if (productPrice >= min && productPrice <= max){
+        console.log(product.name);
+    } else {
+        console.log('Товаров не найдено');
+    };
+    
+    */
+
+ 
