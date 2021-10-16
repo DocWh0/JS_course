@@ -890,4 +890,96 @@ for (let value of user) {
   console.log(value);
 }
 
+
+
+//1. На основе строки “i am in the easycode” сделать новую строку где первые буквы каждого слова будут в верхнем регистре. Использовать for или while.
+
+let str = `i am in the easycode`;
+let newStr = '';
+
+for (let i = 0; i < str.length; i++) {
+  if (i === 0 || str[i - 1] === ' '){newStr += str[i].toUpperCase();
+  } else {
+    newStr += str[i];
+  }
+}
+console.log(newStr);
+
+
+
+
+// 2.Дана строка “tseb eht ma i”. Используя циклы, сделать строку-перевертыш (то есть последняя буква становится первой, предпоследняя - второй итд).
+
+let str = 'tseb eht ma i';
+let res = '';
+
+for (let i = str.length; i--;) {
+  res = res +  str[i]
+}
+console.log(res);
+
+
+// 3.Факториал числа - произведение всех натуральных чисел от 1 до n
+// включительно: 3! = 3*2*1, 5! = 5*4*3*2*1. С помощью циклов вычислить факториал числа 10. Использовать for.
+
+let res = 1;
+
+for (let i = 1; i <= 10; i++) {
+  res *= i;
+}
+console.log(res);
+
+//4. На основе строки “JavaScript is a pretty good language” сделать новую строку,где каждое слово начинается с большой буквы, а пробелы удалены. Использовать for.
+
+let str = 'JavaScript is a pretty good language';
+let newStr = '';
+
+for (let i = 0; i < str.length; i++) {
+  if (i === 0 || str[i - 1] === ' '){newStr += str[i].toUpperCase();
+  } else if (str[i] !== ' '){
+    newStr += str[i];
+  }
+}
+console.log(newStr);
+
+
+// 5.Найти все нечетные числа в массиве от 1 до 15 включительно и вывести их в консоль. Массив [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] Использовать for of.
+// i % 2 == 1 - остаток от деления нечётного числа 1
+let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+for (let i = 1; i <= 15; i++) {
+  if (i % 2 == 1) {
+    console.log(i);
+  }
+}
+
+for (let num of b) {
+  if (num % 2) {
+    console.log(num);
+  }
+}
+
+// Дан объект:
+// Перебрать объект и если значение в свойстве это строка то переписать ее всю в верхнем регистре. Использовать for in.
+
+let list = {
+  name: `denis`,
+  work: `easycode`,
+  age: 29,
+};
+
+// let newList = {};
+
+// for (let i = 0; i < list.length; i++) {
+//   console.log(list[i].name);
+//   userObj[user[i].name] = user[i];
+// }
+
+// перебор через  for in все значения
+
+for (let key in list) {
+  if (typeof list[key] === 'string') {
+    list[key] = list[key].toUpperCase();
+  }
+}
+console.log(list);
 */
