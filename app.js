@@ -894,7 +894,7 @@ for (let value of user) {
 
 //1. На основе строки “i am in the easycode” сделать новую строку где первые буквы каждого слова будут в верхнем регистре. Использовать for или while.
 
-let str = `i am in the easycode`;
+let str = 'i am in the easycode';
 let newStr = '';
 
 for (let i = 0; i < str.length; i++) {
@@ -925,7 +925,7 @@ console.log(res);
 let res = 1;
 
 for (let i = 1; i <= 10; i++) {
-  res *= i;
+  res =res * i;
 }
 console.log(res);
 
@@ -942,6 +942,14 @@ for (let i = 0; i < str.length; i++) {
 }
 console.log(newStr);
 
+for (let i = 0; i < str.length; i++) {
+  if (i === 0 || str[i - 1] === ' '){newStr += str[i].toUpperCase();
+  } else if (str[i] === ' '){
+    continue; 
+  } else {
+    newStr += str[i];
+  }
+}
 
 // 5.Найти все нечетные числа в массиве от 1 до 15 включительно и вывести их в консоль. Массив [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] Использовать for of.
 // i % 2 == 1 - остаток от деления нечётного числа 1
@@ -982,4 +990,75 @@ for (let key in list) {
   }
 }
 console.log(list);
+
+
+Вопрос 4:
+Что будет в консоли ?
+
+let user = {"name":"Smith", age: 30};
+console.log(user['name'] == user.name); //true
+
+Вопрос 5:
+Что будет в консоли?
+
+console.log(+'-' + 2) //NaN - 
+
+Вопрос 8:
+Какое значение имеет объявленная переменная (например, var a;)? //В пустой переменной всегда будет по умолчанию undefined.
+
+Вопрос 9:
+Что будет в консоли?
+
+let foo = { str: 'test' }; 
+console.log(foo && foo.str);// 'test' так как оператор && возвращает последнее значение из перечисленных если все перечисленные значения приводятся к true.
+
+Вопрос 11:
+Что будет в консоли?
+
+let arr = []
+arr[500] = 1
+console.log(arr.length); // Так как мы устанавливаем на 500 индекс значение 1 в массиве добавляется 500 элементов со значением undefined а общая длина 501
+
+Вопрос 12:
+Как можно преобразовать строку в целое число? // parseInt()
+
+
+Вопрос 13:
+Что будет в консоли?
+
+var x = 1; 
+if (x) {
+  var x = 2; 
+  console.log(x);
+} 
+console.log(x); // 2, 2
+
+Вопрос 16:
+Что будет в консоли?
+console.log(typeof null) // object
+
+Вопрос 17:
+Какой тип данных у NaN? //  NaN относится к числам))проверяйте NaN при помощи функции isNan
+
+Вопрос 18:
+Что будет в консоли?
+
+let y; 
+if (y) {
+  let y = 2; 
+  console.log(y);
+} else {
+  let y = 10;
+  console.log(y);
+}
+console.log(y); // 10, undefined
+
+
+Вопрос 20:
+Что будет в консоли?
+
+const obj = { brand: 'EasyCode' };
+obj.country = 'Ukraine';
+console.log(obj) // {brand: 'EasyCode', country : 'Ukraine'} Запрет у констант распространяется только на переопределние но если в них сожержаться объекты то мы можем изменять их содержание, это называется мутацией. 
 */
+
