@@ -1060,5 +1060,56 @@ console.log(y); // 10, undefined
 const obj = { brand: 'EasyCode' };
 obj.country = 'Ukraine';
 console.log(obj) // {brand: 'EasyCode', country : 'Ukraine'} Запрет у констант распространяется только на переопределние но если в них сожержаться объекты то мы можем изменять их содержание, это называется мутацией. 
+
+
+function sayHello(firstName = 'Default', lastName = 'Default') {
+  //function sayHello(firstName = 'Default', lastName = 'Default')
+  if (!firstName) return alert('First Name is emtpy'); 
+  // console.error('Error')
+  console.log(firstName, lastName);
+  console.log("Hello World");
+  return `hello ${firstName} ${lastName}`;
+  //  после return функция не выполнется
+  return `privet ${firstName} ${lastName}`;
+}
+
+//let res = sayHello('' , 'Shvidkyi');
+//let res2 = sayHello('Dima' , 'Shestakov') + '!';
+// let res3 = sayHello();
+// console.log(res3);
+
+
+let x = 10;
+function foo(x) {
+  x = 20; // правильно let x = 20  - тогда в результате будет 20, 10
+  console.log(x);
+  // переменные лучше обьявлять внутри функций или в параметрах чтобы не изменять глобальнык переменные. 
+}
+
+foo();
+
+console.log(x)
+
+
+
+const user = {
+  name: "Ruslan",
+  age: 30,
+};
+
+function getObj(obj) {
+  console.log(obj);
+  obj.name = "Den";
+}
+
+getObj(user);
+console.log(user);
 */
 
+const square = function (x) {
+  return x * x;
+};
+
+(function (msg) {
+  console.log(msg);
+})('Hello world');
