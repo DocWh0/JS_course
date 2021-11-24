@@ -1104,7 +1104,6 @@ function getObj(obj) {
 
 getObj(user);
 console.log(user);
-*/
 
 const square = function (x) {
   return x * x;
@@ -1113,3 +1112,15 @@ const square = function (x) {
 (function (msg) {
   console.log(msg);
 })('Hello world');
+*/
+
+const numArr = [2, 232, 1234, 54, 232]
+
+let value;
+
+//numArr.Length = 0;
+//numArr.Length = 100;
+
+value = Array.isArray(numArr);
+value - numArr[2];
+console.log(value, numArr);
